@@ -105,6 +105,7 @@ def bcp(
         "-d",
         creds.database,
         "-q",  # Executes the SET QUOTED_IDENTIFIERS ON statement, needed for Azure SQL DW
+        "-u",  # trust server cert :(
     ] + auth
 
     if batch_size:
